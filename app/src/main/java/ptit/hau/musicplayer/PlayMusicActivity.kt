@@ -37,17 +37,11 @@ class PlayMusicActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play_music)
 
-        supportActionBar!!.title = "Now playing"
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setDisplayShowHomeEnabled(true)
-
         if (mediaPlayer!=null){
             mediaPlayer!!.stop()
             mediaPlayer!!.release()
         }
-
-
-
+        
         var pos = intent.getIntExtra("pos",0)
         var mySongs = intent.getSerializableExtra("songs") as ArrayList<File>
         var uri = Uri.parse(mySongs[pos].toString())
