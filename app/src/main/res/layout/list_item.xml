@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#000">
+
+    <ImageView
+        android:id="@+id/imgSong"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_music"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/list_item_bg"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/tvSong"
+        android:layout_toEndOf="@id/imgSong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Name of song"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:gravity="center|left"
+        android:layout_marginLeft="10dp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:singleLine="true" />
+
+</RelativeLayout>
